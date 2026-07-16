@@ -87,15 +87,15 @@
 /************************************/	
 
 :root{
-	--primary-color			: #FFFFFF;
+	--primary-color			: #F2E8DE; /* #FFFFFF; */
 	--secondary-color		: #1B1B1B;
-	--text-color			: #F5F5F4;
+	--text-color			  : #c8c8c8; /*#F5F5F4;*/
 	--accent-color			: #E5A93B;
 	--dark-color			: #000000;
 	--divider-color			: #FFFFFF1A;
 	--dark-divider-color	: #F7FBFA1A;
 	--error-color			: rgb(230, 87, 87);
-	--default-font			: "Plus Jakarta Sans", serif;
+	--default-font			: "Manrope", serif;
 }
 
 /************************************/
