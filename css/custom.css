@@ -2257,144 +2257,147 @@ body:has(.offcanvas){
 	filter: brightness(0) invert(0);
 	transform: rotate(45deg);
 } */
-
-/* ১. ইমেজ কন্টেইনার বা ফ্রেমের স্টাইল */
-.project-image .image-anime {
-  width: 100%;
-  height: 400px;      /* ফ্রেমের উচ্চতা (আপনার ডিজাইন অনুযায়ী পরিবর্তন করতে পারেন) */
-  overflow: hidden;   /* বাইরের অংশ লুকিয়ে রাখার জন্য */
-  position: relative;
-  margin: 0;          /* ডিফল্ট মার্জিন রিমুভ করার জন্য */
+.our-projects {
+  padding: 80px 0 50px;
 }
 
-/* ২. ফ্রেমের ভেতরের ইমেজের স্টাইল */
-.project-image .image-anime img {
-  width: 100%;
-  height: auto;
+.project-item {
+  position: relative;
+  border: 1px solid var(--divider-color);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+  border-radius: 30px;
+  height: calc(100% - 30px);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.project-item::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
-  
-  /* মাউস সরিয়ে নিলে উপরে ওঠার স্পিড (১০ সেকেন্ড - অনেক ধীরগতির) */
+  right: 0;
+  bottom: 0;
+  background: var(--secondary-color);
+  opacity: 40%;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+/* --- ইমেজ কন্টেইনার বা ফ্রেম সেটআপ --- */
+.project-image a {
+  display: block;
+  overflow: hidden;
+  cursor: none;
+  height: 400px; /* কার্ডের ভেতরে ফ্রেমের হাইট যতটুকু দেখাতে চান */
+  position: relative;
+  border-radius: 30px 30px 0 0; /* ওপরের কোনাগুলো গোল রাখার জন্য */
+}
+
+/* --- লং ইমেজের ডিফল্ট স্টেট এবং উপরে ওঠার স্পিড --- */
+.project-image img {
+  width: 100%;
+  height: auto; /* ইমেজ যেন তার পুরো লম্বা হাইট পায় */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* মাউস সরালে ধীরস্থিরভাবে উপরে ওঠার গতি (১০ সেকেন্ড) */
   transition: transform 10s ease-in-out; 
   transform: translateY(0);
 }
 
-/* ৩. মাউস হোভার করলে নিচে নামার স্টাইল */
-.project-image:hover .image-anime img {
-  /* মাউস hover করলে নিচে নামার স্পিড (৫ সেকেন্ড) */
+/* --- হোভার করলে নিচে নামার স্পিড --- */
+.project-item:hover .project-image img {
+  /* মাউস হোভার করলে নিচে নামার গতি (৫ সেকেন্ড) */
   transition: transform 5s ease-in-out; 
-  
-  /* ইমেজের পুরো হাইট থেকে ফ্রেমের হাইট বাদ দিয়ে বাকি অংশ স্ক্রল হবে */
+  /* ইমেজের সাইজ অনুযায়ী অটোমেটিক নিচ পর্যন্ত স্ক্রল হবে */
   transform: translateY(calc(-100% + 400px)); 
 }
 
-/************************************/
-/***      12. Our Brands css      ***/
-/************************************/
-
-.our-brands{
-	position: relative;
-	padding: 80px 0;
+.project-item-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  padding: 40px;
 }
 
-.our-brands::before{
-    content: '';
-    display: block;
-    position: absolute;
-    left: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 250px;
-    height: 250px;
-    background: url(../images/section-bg-shape-4.png) no-repeat;
-    background-position: left center;
-    background-size: cover;
-    opacity: 50%;
-    animation: cuberotate 10s infinite linear;
-    animation-direction: alternate;
-    z-index: -1;
+.project-item-content {
+  width: calc(100% - 90px);
 }
 
-.our-brands-box{
-	position: relative;
-	border: 1px solid var(--divider-color);
-	background: url(../images/brands-box-bg-shape.svg) no-repeat;
-	background-size: cover;
-	background-position: top left;
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	backdrop-filter: blur(100px);
-	-webkit-backdrop-filter: blur(100px);
-	border-radius: 30px;
-	padding: 80px;
-	overflow: hidden;
+.project-item-content p {
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-.our-brands-box::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--secondary-color);
-    opacity: 40%;
-    height: 100%;
-    width: 100%;
+.project-item-content h3 {
+  font-size: 22px;
 }
 
-.brands-content{
-	position: relative;
-	width: calc(100% - 280px);
-	z-index: 1;
+.project-item-content h3 a {
+  color: inherit;
 }
 
-.brands-body{
-	display: flex;
-	gap: 30px 80px;
-	flex-wrap: wrap;
+.project-btn {
+  margin-left: 30px;
 }
 
-.brands-body-content{
-	position: relative;
-	width: calc(60% - 40px);
+.project-btn a {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.brands-body-content::before{
-	content: '';
-	position: absolute;
-	top: 0;
-	right: -40px;
-	bottom: 0;
-	background-color: var(--divider-color);
-	width: 1px;
-	height: 100%;
+.project-btn a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primary-color);
+  opacity: 20%;
+  height: 100%;
+  width: 100%;
 }
 
-.brands-body-content p{
-	margin: 0;
+.project-btn a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(0);
+  background: var(--accent-color);
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s ease-in-out;
 }
 
-.brands-btn{
-	width: calc(40% - 40px);
+.project-btn a:hover:after {
+  transform: scale(1);
 }
 
-.brands-circle-image{
-	position: relative;
-	margin-left: 80px;
-	z-index: 1;
+.project-btn a img {
+  position: relative;
+  max-width: 18px;
+  transition: all 0.4s ease-in-out;
+  z-index: 1;
 }
 
-.brands-circle-image a{
-	display: inline-block;
-}
-
-.brands-circle-image a img{
-	width: 100%;
-	max-width: 200px;
-	animation: infiniterotate 30s infinite linear;
+.project-btn a:hover img {
+  filter: brightness(0) invert(0);
+  transform: rotate(45deg);
 }
 
 /************************************/
