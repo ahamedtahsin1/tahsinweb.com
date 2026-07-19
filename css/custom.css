@@ -1,6 +1,6 @@
 /* ----------------------------------------------------------------------------------------
-* Author        : Awaiken
-* Template Name : Artistic - Web Agency HTML Template
+* Author        : Tahsin
+* Template Name : tahsinweb - Web Agency
 * File          : CSS File
 * Version       : 1.0
 * ---------------------------------------------------------------------------------------- */
@@ -2127,7 +2127,7 @@ body:has(.offcanvas){
 /************************************/
 /***     11. Our Projects css     ***/
 /************************************/
-
+/* 
 .our-projects{
 	padding: 80px 0 50px;
 }
@@ -2256,6 +2256,37 @@ body:has(.offcanvas){
 .project-btn a:hover img{
 	filter: brightness(0) invert(0);
 	transform: rotate(45deg);
+} */
+
+/* ১. ইমেজ কন্টেইনার বা ফ্রেমের স্টাইল */
+.project-image .image-anime {
+  width: 100%;
+  height: 400px;      /* ফ্রেমের উচ্চতা (আপনার ডিজাইন অনুযায়ী পরিবর্তন করতে পারেন) */
+  overflow: hidden;   /* বাইরের অংশ লুকিয়ে রাখার জন্য */
+  position: relative;
+  margin: 0;          /* ডিফল্ট মার্জিন রিমুভ করার জন্য */
+}
+
+/* ২. ফ্রেমের ভেতরের ইমেজের স্টাইল */
+.project-image .image-anime img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  /* মাউস সরিয়ে নিলে উপরে ওঠার স্পিড (১০ সেকেন্ড - অনেক ধীরগতির) */
+  transition: transform 10s ease-in-out; 
+  transform: translateY(0);
+}
+
+/* ৩. মাউস হোভার করলে নিচে নামার স্টাইল */
+.project-image:hover .image-anime img {
+  /* মাউস হোভার করলে নিচে নামার স্পিড (৫ সেকেন্ড) */
+  transition: transform 5s ease-in-out; 
+  
+  /* ইমেজের পুরো হাইট থেকে ফ্রেমের হাইট বাদ দিয়ে বাকি অংশ স্ক্রল হবে */
+  transform: translateY(calc(-100% + 400px)); 
 }
 
 /************************************/
