@@ -2258,6 +2258,7 @@ body:has(.offcanvas){
 	transform: rotate(45deg);
 } */
 
+
 .our-projects {
   padding: 80px 0 50px;
 }
@@ -2287,7 +2288,6 @@ body:has(.offcanvas){
   z-index: -1;
 }
 
-/* --- নতুন ফিক্সড স্ক্রলিং ফ্রেম কন্টেইনার --- */
 .project-image a {
   display: block;
   overflow: hidden;
@@ -2295,37 +2295,47 @@ body:has(.offcanvas){
   border-radius: 30px 30px 0 0;
 }
 
+/* --- ব্যাকগ্রাউন্ড ইমেজ ফ্রেম সেটআপ --- */
 .project-scroll-frame {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 380px; /* ফ্রেমের উচ্চতা */
-  overflow: hidden;
-  position: relative;
+  height: 380px; /* ডেস্কটপে ফ্রেমের উচ্চতা */
   display: block;
-}
-
-/* --- লং ইমেজের ডিফল্ট পজিশন ও ওপরে ওঠার স্পিড --- */
-.project-scroll-frame img {
-  width: 100%;
-  height: auto;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background-position: top center; /* ডিফল্টভাবে ইমেজের টপ পজিশন দেখাবে */
+  background-size: cover; /* ইমেজকে চ্যাপ্টা হতে দেবে না, রেশিও ঠিক রাখবে */
+  background-repeat: no-repeat;
   /* মাউস সরালে ধীরস্থিরভাবে ওপরে ওঠার গতি (১২ সেকেন্ড) */
-  transition: transform 12s ease-in-out; 
-  transform: translateY(0);
+  transition: background-position 12s ease-in-out !important; 
 }
 
-/* --- পুরো কার্ডে মাউস হোভার করলে নিচে নামার স্পিড --- */
-.project-item:hover .project-scroll-frame img {
-  /* নিচে নামার গতি (৫ সেকেন্ড) */
-  transition: transform 5s ease-in-out; 
-  /* ইমেজের দৈর্ঘ্য অনুযায়ী নিচ পর্যন্ত স্ক্রল হবে */
-  transform: translateY(calc(-100% + 380px)); 
+/* --- ডেস্কটপে হোভার করলে ইমেজ নিচে নামার গতি (৫ সেকেন্ড) --- */
+.project-item:hover .project-scroll-frame {
+  background-position: bottom center;
+  transition: background-position 10s ease-in-out !important;
 }
 
+/* ==========================================================
+   ৩. মোবাইল ও ট্যাবলেটের জন্য রেসপন্সিভ ফিক্স (চ্যাপ্টা হওয়া অসম্ভব)
+   ========================================================== */
+@media (max-width: 768px) {
+  .project-scroll-frame {
+    height: 250px !important; /* মোবাইলের জন্য ফ্রেমের হাইট */
+    background-position: top center !important;
+    background-size: cover !important;
+    /* মোবাইলে টাচ সরালে ওপরে ওঠার স্পিড */
+    transition: background-position 10s ease-in-out !important; 
+  }
+
+  /* মোবাইলে টাচ বা হোভার করলে ইমেজ স্মুথলি নিচের দিকে নামবে */
+  .project-item:hover .project-scroll-frame {
+    background-position: bottom center !important;
+    /* নিচে নামার স্পিড ৫ সেকেন্ড */
+    transition: background-position 10s ease-in-out !important;
+  }
+}
+
+/* --- বাকি পূর্বের কোড অপরিবর্তিত থাকবে --- */
 .project-item-body {
   display: flex;
   flex-wrap: wrap;
@@ -2409,6 +2419,7 @@ body:has(.offcanvas){
   filter: brightness(0) invert(0);
   transform: rotate(45deg);
 }
+
 
 /************************************/
 /***      12. Our Brands css      ***/
