@@ -660,7 +660,7 @@ header.main-header .header-sticky.active{
 	font-size: 16px;
 	font-weight: 600;
 	line-height: normal;
-	padding: 15px !important;
+	padding: 10px !important;
 	color: var(--primary-color);
 	text-transform: capitalize;
 	transition: all 0.3s ease-in-out;
