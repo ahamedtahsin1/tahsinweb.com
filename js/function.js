@@ -23,33 +23,10 @@
 	}
 	
 	var $window = $(window); 
-	var $body = $('body'); 
-
-	/* ==========================================================
-   TAHSINWEB - Automatic Project Image Scroll on Screen Entry
-   ========================================================== */
-document.addEventListener("DOMContentLoaded", function () {
-  const observerOptions = {
-    root: null, 
-    threshold: 0.3 
-  };
-
-  // এখানে IntersectionObserver শব্দটি একদম একসাথে (কোনো স্পেস ছাড়া) হবে
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      } else {
-        entry.target.classList.remove('is-visible');
-      }
-    });
-  }, observerOptions);
-
-  const scrollFrames = document.querySelectorAll('.project-scroll-frame');
-  scrollFrames.forEach(frame => observer.observe(frame));
-});
+	var $body = $('body');
 
 
+	
 
 	/* Preloader Effect */
 	$window.on('load', function(){
