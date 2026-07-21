@@ -1,12 +1,12 @@
 <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1166_317)">
-<path d="M26.7846 1.88281H3.21317C2.0297 1.88281 1.07031 2.8422 1.07031 4.02567V27.5971C1.07031 28.7806 2.0297 29.74 3.21317 29.74H26.7846C27.9681 29.74 28.9275 28.7806 28.9275 27.5971V4.02567C28.9275 2.8422 27.9681 1.88281 26.7846 1.88281Z" stroke="#E5A93B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M15 25.4531C19.1421 25.4531 22.5 22.0953 22.5 17.9531C22.5 13.811 19.1421 10.4531 15 10.4531C10.8579 10.4531 7.5 13.811 7.5 17.9531C7.5 22.0953 10.8579 25.4531 15 25.4531Z" stroke="#E5A93B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M1.07031 8.3125H7.49888" stroke="#E5A93B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M22.5 8.3125H28.9286" stroke="#E5A93B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M15 17.8906V25.3906" stroke="#E5A93B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M8.57031 14.0977L14.9989 17.8905" stroke="#E5A93B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M21.4286 14.0977L15 17.8905" stroke="#E5A93B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.7846 1.88281H3.21317C2.0297 1.88281 1.07031 2.8422 1.07031 4.02567V27.5971C1.07031 28.7806 2.0297 29.74 3.21317 29.74H26.7846C27.9681 29.74 28.9275 28.7806 28.9275 27.5971V4.02567C28.9275 2.8422 27.9681 1.88281 26.7846 1.88281Z" stroke="#C19179" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 25.4531C19.1421 25.4531 22.5 22.0953 22.5 17.9531C22.5 13.811 19.1421 10.4531 15 10.4531C10.8579 10.4531 7.5 13.811 7.5 17.9531C7.5 22.0953 10.8579 25.4531 15 25.4531Z" stroke="#C19179" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1.07031 8.3125H7.49888" stroke="#C19179" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22.5 8.3125H28.9286" stroke="#C19179" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 17.8906V25.3906" stroke="#C19179" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.57031 14.0977L14.9989 17.8905" stroke="#C19179" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.4286 14.0977L15 17.8905" stroke="#C19179" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
 <clipPath id="clip0_1166_317">

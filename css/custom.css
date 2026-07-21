@@ -54,7 +54,7 @@
   z-index: 999; /* Jeno shob content-er upore thake */
   border: none;
   outline: none;
-  background-color: #E5A93B; /* Clean matte dark background */
+  background-color: #C19179; /* Clean matte dark background */
   color: #000000;
   cursor: pointer;
   padding: 14px 18px;
@@ -83,20 +83,38 @@
 }
 
 /************************************/
-/*** 	 01. Global Variables	  ***/
+/*** 	 01. Global Variables	Theme  ***/
 /************************************/	
-
+/* 
 :root{
-	--primary-color			: #F2E8DE; /* #FFFFFF; */
+	--primary-color			: #F5F1ED; /* #FFFFFF; 
 	--secondary-color		: #1B1B1B;
-	--text-color			  : #c8c8c8; /*#F5F5F4;*/
-	--accent-color			: #E5A93B;
+	--text-color			  : #c8c8c8; /*#F5F5F4;
+	--accent-color			: #C19179;
 	--dark-color			: #000000;
 	--divider-color			: #FFFFFF1A;
 	--dark-divider-color	: #F7FBFA1A;
 	--error-color			: rgb(230, 87, 87);
 	--default-font			: "Manrope", serif;
+} */
+
+
+/************************************/
+/*** 	 01. Global Variables	  ***/
+/************************************/	
+
+:root{
+	--primary-color			: #F5F1ED;
+	--secondary-color		: #C19179;
+	--text-color			: #B8B1AC;
+	--accent-color			: #A97862;
+	--dark-color			: #0B0B0B;
+	--divider-color			: #FFFFFF1A;
+	--dark-divider-color	: #FFFFFF12;
+	--error-color			: #E65757;
+	--default-font			: "Manrope", serif;
 }
+
 
 /************************************/
 /*** 	   02. General css		  ***/
@@ -264,16 +282,16 @@ body{
   margin-right: 50px;
   
   /* ৩ পিক্সেলের ক্লিয়ার বর্ডার */
-  border: 3px solid transparent; 
+  border: 2px solid transparent; 
   
   /* কনিক গ্রেডিয়েন্টকে সরাসরি আমাদের নতুন রেজিস্ট্রি ভেরিয়েবল --angle দিয়ে ঘোরানো হচ্ছে */
-  background-image: linear-gradient(#E5A93B, #E5A93B), 
+  background-image: linear-gradient(#C19179, #C19179), 
                     conic-gradient(
                       from var(--angle),
-                      #fff 0deg,   /* আমাদের সিগনেচার আল্ট্রা-মডার্ন লাইম */
-                      #fff 120deg, /* পিউর হোয়াইট */
-                      #fff 240deg, /* ডিপ ব্ল্যাক */
-                      #fff 360deg
+                      #6F5E55 0deg,   /* আমাদের সিগনেচার আল্ট্রা-মডার্ন লাইম */
+                      #6F5E55 120deg, /* পিউর হোয়াইট */
+                      #6F5E55 240deg, /* ডিপ ব্ল্যাক */
+                      #6F5E55 360deg
                     );
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -290,14 +308,14 @@ body{
 }
 
 .btn-default:hover {
-	color: #F2E8DE;
-  background-image: linear-gradient(#E5A93B, #E5A93B), 
+	color: #F5F1ED !important;
+  background-image: linear-gradient(#6F5E55, #6F5E55), 
                     conic-gradient(
                       from var(--angle),
-                      #DEFF9A 0deg, 
-                      #FFFFFF 120deg, 
-                      #000000 240deg, 
-                      #DEFF9A 360deg
+                      #C19179 0deg, 
+                      #C19179 120deg, 
+                      #C19179 240deg, 
+                      #C19179 360deg
                     );
 }
 
@@ -825,7 +843,8 @@ body:has(.offcanvas){
 	bottom: 0;
 	left: auto;
 	right: -15px;
-	background: var(--secondary-color) !important;
+	/* background: var(--secondary-color) !important; */
+	background: #0B0B0B;
 	border-radius: 0;
 	opacity: 100%;
 	width: 100% !important;
@@ -2753,7 +2772,7 @@ body:has(.offcanvas){
     background: url(../images/pricing-item-bg-shape.svg) no-repeat;
     background-position: top left;
     background-size: auto;
-    border: 1px solid #E5A93B /*var(--divider-color)*/;
+    border: 1px solid #C19179 /*var(--divider-color)*/;
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
     border-radius: 30px;
