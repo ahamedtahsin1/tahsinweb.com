@@ -1387,32 +1387,37 @@ body:has(.offcanvas){
 	padding: 160px 0 80px;
 }
 
-.about-us::before{
+.about-us::before {
     content: '';
     display: block;
     position: absolute;
     right: -20px;
-    bottom: 80px;
+    bottom: 520px;
+
     background: url(../images/section-bg-shape-1.png) no-repeat;
     background-position: right bottom;
     background-size: cover;
+
     width: 250px;
     height: 250px;
-	opacity: 50%;
+
+    opacity: 50%;
+
     animation: circlerotate 10s infinite linear;
-    animation-direction: alternate;
+    animation-direction: normal;
+
     z-index: -1;
 }
 
-@keyframes circlerotate{
-	from{
-		transform: translateY(0) rotate(0deg);
-	}
-	to{
-		transform: translateY(-110%) rotate(360deg);
-	}
-}
+@keyframes circlerotate {
+    from {
+        transform: rotate(360deg);
+    }
 
+    to {
+        transform: rotate(0deg);
+    }
+}
 .about-us-box{
 	display: flex;
 	flex-wrap: wrap;
@@ -1425,7 +1430,7 @@ body:has(.offcanvas){
 	background-position: bottom 45px left 45px;
 	background-size: auto;
 	width: calc(33% - 20px);
-	padding-bottom: 150px;
+	padding-bottom: 50px;
 }
 
 .about-image-1 figure,
