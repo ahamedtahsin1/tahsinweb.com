@@ -1109,7 +1109,7 @@ body:has(.offcanvas){
 
 .hero.hero-slider-layout .hero-slide{
 	position: relative;
-	background: url('../images/hero-bg.jpg');
+	background: url('../images/hero-bg.webp');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -1117,7 +1117,7 @@ body:has(.offcanvas){
 }
 
 .hero.hero-slider-layout .hero-slide.slide-2{
-	background: url('../images/hero-bg-2.jpg');
+	background: url('../images/hero-bg-2.webp');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
