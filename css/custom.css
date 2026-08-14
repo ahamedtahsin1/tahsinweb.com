@@ -4943,7 +4943,7 @@ body:has(.offcanvas){
 
 .post-image{
 	position: relative;
-	margin-bottom: 30px;
+	margin-bottom: 110px;
 }
 
 .post-image figure{
@@ -4953,6 +4953,9 @@ body:has(.offcanvas){
 .post-image figure,
 .post-image img{
 	aspect-ratio: 1 / 0.50;
+	margin: 0 auto;
+	height: 400px;
+	width: auto;
 	object-fit: cover;
 	border-radius: 30px;
 }
