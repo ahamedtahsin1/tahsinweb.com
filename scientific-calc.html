@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scientific Calculator - Free Advanced Calculator | TAHSION</title>
+
+    <meta name="description"
+          content="Use the free TAHSION Scientific Calculator for advanced calculations including trigonometry, logarithms, powers, roots, factorials, constants, memory and calculation history.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+          href="https://ahamedtahsin1.github.io/tahsinweb.com/tools/scientific-calculator/">
+
+    <link rel="icon" href="../../images/favicon.png">
+
+    <link rel="stylesheet" href="./tools/css/scientific-calc.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "TAHSION Scientific Calculator",
+        "url": "https://ahamedtahsin1.github.io/tahsinweb.com/tools/scientific-calculator/",
+        "applicationCategory": "CalculatorApplication",
+        "operatingSystem": "Any",
+        "isAccessibleForFree": true,
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <a href="../../index.html" class="brand">
+
+            <span class="brand-mark">T</span>
+
+            <span>
+                <strong>TAHSION</strong>
+                <small>FREE TOOLS</small>
+            </span>
+
+        </a>
+
+        <nav class="main-nav">
+
+            <a href="../../index.html">Home</a>
+
+            <a href="../../tools.html" class="active">
+                Free Tools
+            </a>
+
+            <a href="../../contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="breadcrumb">
+
+                <a href="../../index.html">Home</a>
+
+                <span>/</span>
+
+                <a href="../../tools.html">
+                    Free Tools
+                </a>
+
+                <span>/</span>
+
+                <span>Scientific Calculator</span>
+
+            </div>
+
+
+            <span class="eyebrow">
+                TAHSION FREE TOOLS
+            </span>
+
+
+            <h1>
+                Scientific
+                <span>Calculator</span>
+            </h1>
+
+
+            <p>
+                A powerful browser-based scientific calculator
+                for everyday mathematics, engineering and study.
+            </p>
+
+
+            <div class="hero-badges">
+
+                <span>100% Free</span>
+
+                <span>No Signup</span>
+
+                <span>Private</span>
+
+                <span>Works Offline</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CALCULATOR -->
+
+    <section class="calculator-section">
+
+        <div class="container calculator-layout">
+
+
+            <!-- CALCULATOR -->
+
+            <div class="calculator-shell">
+
+
+                <!-- CALCULATOR HEADER -->
+
+                <div class="calculator-header">
+
+                    <div>
+
+                        <span class="calculator-label">
+                            SCIENTIFIC CALCULATOR
+                        </span>
+
+                        <div class="calculator-title">
+
+                            <span class="online-dot"></span>
+
+                            TAHSION CALC
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="header-actions">
+
+                        <button
+                            class="icon-btn"
+                            id="clearHistoryBtn"
+                            title="Clear history"
+                        >
+                            ⌫
+                        </button>
+
+                        <button
+                            class="icon-btn"
+                            id="copyResultBtn"
+                            title="Copy result"
+                        >
+                            ⧉
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DISPLAY -->
+
+                <div class="display">
+
+                    <div
+                        class="display-expression"
+                        id="expression"
+                    >
+                        0
+                    </div>
+
+                    <div
+                        class="display-result"
+                        id="result"
+                    >
+                        0
+                    </div>
+
+                    <div
+                        class="display-status"
+                        id="displayStatus"
+                    >
+                        Ready
+                    </div>
+
+                </div>
+
+
+                <!-- DISPLAY CONTROLS -->
+
+                <div class="display-controls">
+
+                    <div class="angle-controls">
+
+                        <button
+                            class="angle-btn active"
+                            id="degBtn"
+                        >
+                            DEG
+                        </button>
+
+                        <button
+                            class="angle-btn"
+                            id="radBtn"
+                        >
+                            RAD
+                        </button>
+
+                        <button
+                            class="angle-btn"
+                            id="gradBtn"
+                        >
+                            GRAD
+                        </button>
+
+                    </div>
+
+
+                    <div class="precision-control">
+
+                        <label for="precision">
+                            Precision
+                        </label>
+
+                        <select id="precision">
+
+                            <option value="6">
+                                6
+                            </option>
+
+                            <option value="8" selected>
+                                8
+                            </option>
+
+                            <option value="10">
+                                10
+                            </option>
+
+                            <option value="12">
+                                12
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MEMORY -->
+
+                <div class="memory-bar">
+
+                    <span class="memory-indicator">
+                        <i id="memoryIndicator"></i>
+                        MEMORY
+                    </span>
+
+                    <button data-memory="clear">
+                        MC
+                    </button>
+
+                    <button data-memory="recall">
+                        MR
+                    </button>
+
+                    <button data-memory="add">
+                        M+
+                    </button>
+
+                    <button data-memory="subtract">
+                        M−
+                    </button>
+
+                    <button data-memory="store">
+                        MS
+                    </button>
+
+                </div>
+
+
+                <!-- KEYPAD -->
+
+                <div class="keypad">
+
+
+                    <!-- ROW 1 -->
+
+                    <button
+                        class="function"
+                        data-value="sin("
+                    >
+                        sin
+                    </button>
+
+                    <button
+                        class="function"
+                        data-value="cos("
+                    >
+                        cos
+                    </button>
+
+                    <button
+                        class="function"
+                        data-value="tan("
+                    >
+                        tan
+                    </button>
+
+                    <button
+                        class="function"
+                        data-value="asin("
+                    >
+                        sin⁻¹
+                    </button>
+
+                    <button
+                        class="function"
+                        data-value="acos("
+                    >
+                        cos⁻¹
+                    </button>
+
+
+                    <!-- ROW 2 -->
+
+                    <button
+                        class="function"
+                        data-value="atan("
+                    >
+                        tan⁻¹
+                    </button>
+
+                    <button
+                        class="function"
+                        data-value="sinh("
+                    >
+                        sinh
+                    </button>
+
+                    <button
+                        class="function"
+                        data-value="cosh("
+                    >
+                        cosh
+                    </button>
+
+                    <button
+                        class="function"
+                        data-value="tanh("
+                    >
+                        tanh
+                    </button>
+
+                    <button
+                        class="function"
+                        data-value="abs("
+                    >
+                        |x|
+                    </button>
+
+
+                    <!-- ROW 3 -->
+
+                    <button
+                        class="function"
+                        data-value="log("
+                    >
+                        log
+                    </button>
+
+                    <button
+                        class="function"
+                        data-value="ln("
+                    >
+                        ln
+                    </button>
+
+                    <button
+                        class="function"
+                        data-value="sqrt("
+                    >
+                        √
+                    </button>
+
+                    <button
+                        class="function"
+                        data-value="cbrt("
+                    >
+                        ∛
+                    </button>
+
+                    <button
+                        class="function"
+                        data-value="exp("
+                    >
+                        eˣ
+                    </button>
+
+
+                    <!-- ROW 4 -->
+
+                    <button
+                        class="function"
+                        data-value="10^"
+                    >
+                        10ˣ
+                    </button>
+
+                    <button
+                        class="function"
+                        data-value="^2"
+                    >
+                        x²
+                    </button>
+
+                    <button
+                        class="function"
+                        data-value="^3"
+                    >
+                        x³
+                    </button>
+
+                    <button
+                        class="function"
+                        data-value="^"
+                    >
+                        xʸ
+                    </button>
+
+                    <button
+                        class="function"
+                        data-value="!"
+                    >
+                        x!
+                    </button>
+
+
+                    <!-- ROW 5 -->
+
+                    <button
+                        class="function"
+                        data-value="("
+                    >
+                        (
+                    </button>
+
+                    <button
+                        class="function"
+                        data-value=")"
+                    >
+                        )
+                    </button>
+
+                    <button
+                        class="constant"
+                        data-value="π"
+                    >
+                        π
+                    </button>
+
+                    <button
+                        class="constant"
+                        data-value="e"
+                    >
+                        e
+                    </button>
+
+                    <button
+                        class="action"
+                        data-action="backspace"
+                    >
+                        ⌫
+                    </button>
+
+
+                    <!-- ROW 6 -->
+
+                    <button data-value="7">
+                        7
+                    </button>
+
+                    <button data-value="8">
+                        8
+                    </button>
+
+                    <button data-value="9">
+                        9
+                    </button>
+
+                    <button
+                        class="operator"
+                        data-value="÷"
+                    >
+                        ÷
+                    </button>
+
+                    <button
+                        class="action"
+                        data-action="clear"
+                    >
+                        AC
+                    </button>
+
+
+                    <!-- ROW 7 -->
+
+                    <button data-value="4">
+                        4
+                    </button>
+
+                    <button data-value="5">
+                        5
+                    </button>
+
+                    <button data-value="6">
+                        6
+                    </button>
+
+                    <button
+                        class="operator"
+                        data-value="×"
+                    >
+                        ×
+                    </button>
+
+                    <button
+                        class="operator"
+                        data-value="%"
+                    >
+                        %
+                    </button>
+
+
+                    <!-- ROW 8 -->
+
+                    <button data-value="1">
+                        1
+                    </button>
+
+                    <button data-value="2">
+                        2
+                    </button>
+
+                    <button data-value="3">
+                        3
+                    </button>
+
+                    <button
+                        class="operator"
+                        data-value="−"
+                    >
+                        −
+                    </button>
+
+                    <button
+                        class="operator"
+                        data-value="+"
+                    >
+                        +
+                    </button>
+
+
+                    <!-- ROW 9 -->
+
+                    <button
+                        class="special"
+                        data-value="Ans"
+                    >
+                        Ans
+                    </button>
+
+                    <button
+                        class="wide"
+                        data-value="0"
+                    >
+                        0
+                    </button>
+
+                    <button data-value=".">
+                        .
+                    </button>
+
+                    <button
+                        class="operator equals"
+                        data-value="="
+                    >
+                        =
+                    </button>
+
+                </div>
+
+
+                <div class="calculator-footer">
+
+                    <span>
+                        TAHSION CALC
+                    </span>
+
+                    <span>
+                        Browser-based · Private
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- HISTORY -->
+
+            <aside class="history-panel">
+
+                <div class="history-header">
+
+                    <div>
+
+                        <span class="history-label">
+                            CALCULATIONS
+                        </span>
+
+                        <h2>
+                            History
+                        </h2>
+
+                    </div>
+
+                    <span
+                        class="history-count"
+                        id="historyCount"
+                    >
+                        0
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="history-list"
+                    id="historyList"
+                >
+
+                    <div class="empty-history">
+
+                        <div class="empty-icon">
+                            ∑
+                        </div>
+
+                        <strong>
+                            No calculations yet
+                        </strong>
+
+                        <p>
+                            Your recent calculations
+                            will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="clear-history"
+                    id="clearHistory"
+                >
+                    Clear calculation history
+                </button>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="features-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    BUILT FOR REAL CALCULATIONS
+                </span>
+
+                <h2>
+                    More than a basic calculator.
+                </h2>
+
+                <p>
+                    Everything you need for everyday mathematics,
+                    technical calculations and scientific work.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+
+                    <span>01</span>
+
+                    <h3>
+                        Advanced Functions
+                    </h3>
+
+                    <p>
+                        Trigonometry, logarithms, powers,
+                        roots, factorials and constants.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <span>02</span>
+
+                    <h3>
+                        Calculation History
+                    </h3>
+
+                    <p>
+                        Quickly revisit and reuse previous
+                        calculations directly from your browser.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <span>03</span>
+
+                    <h3>
+                        Private by Design
+                    </h3>
+
+                    <p>
+                        Calculations happen directly in your
+                        browser. No account or server required.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <span>04</span>
+
+                    <h3>
+                        DEG, RAD & GRAD
+                    </h3>
+
+                    <p>
+                        Switch angle modes instantly for
+                        different mathematical applications.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SEO -->
+
+    <section class="content-section">
+
+        <div class="container content-container">
+
+            <span class="section-label">
+                SCIENTIFIC CALCULATOR
+            </span>
+
+            <h2>
+                Free online scientific calculator
+            </h2>
+
+            <p>
+                The TAHSION Scientific Calculator is a free browser-based
+                calculator designed for students, developers, engineers
+                and anyone who needs more than basic arithmetic.
+            </p>
+
+            <p>
+                Calculate trigonometric functions, logarithms, powers,
+                roots, factorials and mathematical constants. Switch
+                between degrees, radians and gradians depending on the
+                type of calculation you are performing.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+
+    <section class="faq-section">
+
+        <div class="container faq-container">
+
+            <span class="section-label">
+                FAQ
+            </span>
+
+            <h2>
+                Scientific Calculator FAQ
+            </h2>
+
+
+            <details>
+
+                <summary>
+                    Is the TAHSION Scientific Calculator free?
+                </summary>
+
+                <p>
+                    Yes. It is completely free to use and does not
+                    require an account.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Does it work on mobile?
+                </summary>
+
+                <p>
+                    Yes. The calculator is responsive and works on
+                    modern phones, tablets and desktop browsers.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Does it support degrees and radians?
+                </summary>
+
+                <p>
+                    Yes. You can switch between DEG, RAD and GRAD modes
+                    from the calculator interface.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Are my calculations uploaded?
+                </summary>
+
+                <p>
+                    No. Calculations are performed directly inside
+                    your browser.
+                </p>
+
+            </details>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container footer-inner">
+
+        <div>
+
+            <a
+                href="../../index.html"
+                class="footer-logo"
+            >
+                TAHSION
+            </a>
+
+            <p>
+                Helping businesses build their digital presence.
+            </p>
+
+        </div>
+
+
+        <a
+            href="../../tools.html"
+            class="more-tools"
+        >
+            ← Back to Free Tools
+        </a>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <p>
+            © <span id="currentYear"></span>
+            TAHSION. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<div
+    class="toast"
+    id="toast"
+>
+    Copied to clipboard
+</div>
+
+
+<script src="./tools/js/scientific-calc.js"></script>
+
+</body>
+</html>

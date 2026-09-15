@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QR Code Generator - Free QR Code Maker | TAHSION</title>
+
+    <meta name="description"
+        content="Create free QR codes for URLs, text, phone numbers, emails, Wi-Fi and contact information. Customize and download your QR code instantly with TAHSION.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+        href="https://ahamedtahsin1.github.io/tahsinweb.com/tools/qr-code-generator/">
+
+    <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+    <link rel="stylesheet" href="./tools/css/qr-code-gen.css">
+
+    <!-- QR Code Library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "TAHSION QR Code Generator",
+        "url": "https://ahamedtahsin1.github.io/tahsinweb.com/tools/qr-code-generator/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container nav">
+
+        <a href="../../index.html" class="brand">
+            <span class="brand-mark">T</span>
+            <span>
+                <strong>TAHSION</strong>
+                <small>FREE TOOLS</small>
+            </span>
+        </a>
+
+        <a href="../../tools.html" class="back-link">
+            ← All Tools
+        </a>
+
+    </div>
+</header>
+
+
+<main>
+
+    <section class="hero">
+        <div class="container">
+
+            <div class="breadcrumb">
+                <a href="../../index.html">Home</a>
+                <span>/</span>
+                <a href="../../tools.html">Free Tools</a>
+                <span>/</span>
+                <span>QR Code Generator</span>
+            </div>
+
+            <div class="hero-content">
+
+                <span class="eyebrow">FREE QR TOOL</span>
+
+                <h1>
+                    QR Code <span>Generator</span>
+                </h1>
+
+                <p>
+                    Create professional QR codes for websites, text, phone numbers,
+                    emails and more — instantly and for free.
+                </p>
+
+                <div class="badges">
+                    <span>✓ 100% Free</span>
+                    <span>✓ No Signup</span>
+                    <span>✓ Instant</span>
+                    <span>✓ Private</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="generator-section">
+
+        <div class="container generator-grid">
+
+            <!-- LEFT -->
+            <div class="panel input-panel">
+
+                <div class="panel-heading">
+                    <div>
+                        <span class="mini-label">CREATE YOUR CODE</span>
+                        <h2>QR Code Details</h2>
+                    </div>
+                </div>
+
+
+                <div class="type-tabs">
+
+                    <button class="type-tab active" data-type="url">
+                        <span>🔗</span>
+                        Website
+                    </button>
+
+                    <button class="type-tab" data-type="text">
+                        <span>📝</span>
+                        Text
+                    </button>
+
+                    <button class="type-tab" data-type="phone">
+                        <span>📞</span>
+                        Phone
+                    </button>
+
+                    <button class="type-tab" data-type="email">
+                        <span>✉️</span>
+                        Email
+                    </button>
+
+                    <button class="type-tab" data-type="wifi">
+                        <span>📶</span>
+                        Wi-Fi
+                    </button>
+
+                </div>
+
+
+                <!-- URL -->
+                <div class="form-section active" id="url-section">
+
+                    <label for="urlInput">Website URL</label>
+
+                    <input
+                        type="url"
+                        id="urlInput"
+                        placeholder="https://example.com"
+                        autocomplete="url"
+                    >
+
+                    <p class="field-help">
+                        Enter the complete website address.
+                    </p>
+
+                </div>
+
+
+                <!-- TEXT -->
+                <div class="form-section" id="text-section">
+
+                    <label for="textInput">Your Text</label>
+
+                    <textarea
+                        id="textInput"
+                        rows="5"
+                        placeholder="Type your message here..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- PHONE -->
+                <div class="form-section" id="phone-section">
+
+                    <label for="phoneInput">Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="phoneInput"
+                        placeholder="+1 555 123 4567"
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="form-section" id="email-section">
+
+                    <label for="emailInput">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="emailInput"
+                        placeholder="hello@example.com"
+                    >
+
+                    <label for="emailSubject">Subject</label>
+
+                    <input
+                        type="text"
+                        id="emailSubject"
+                        placeholder="Email subject"
+                    >
+
+                    <label for="emailBody">Message</label>
+
+                    <textarea
+                        id="emailBody"
+                        rows="4"
+                        placeholder="Your message..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- WIFI -->
+                <div class="form-section" id="wifi-section">
+
+                    <label for="wifiName">Wi-Fi Network Name</label>
+
+                    <input
+                        type="text"
+                        id="wifiName"
+                        placeholder="My Wi-Fi"
+                    >
+
+                    <label for="wifiPassword">Password</label>
+
+                    <input
+                        type="text"
+                        id="wifiPassword"
+                        placeholder="Wi-Fi password"
+                    >
+
+                    <label for="wifiSecurity">Security</label>
+
+                    <select id="wifiSecurity">
+                        <option value="WPA">WPA/WPA2</option>
+                        <option value="WEP">WEP</option>
+                        <option value="nopass">No Password</option>
+                    </select>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="wifiHidden">
+                        Hidden network
+                    </label>
+
+                </div>
+
+
+                <!-- CUSTOMIZATION -->
+                <div class="customization">
+
+                    <div class="section-title">
+                        <span>🎨</span>
+                        Customize
+                    </div>
+
+                    <div class="color-grid">
+
+                        <div>
+                            <label for="foreground">QR Color</label>
+
+                            <div class="color-input">
+                                <input type="color" id="foreground" value="#000000">
+                                <span id="foregroundValue">#000000</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="background">Background</label>
+
+                            <div class="color-input">
+                                <input type="color" id="background" value="#ffffff">
+                                <span id="backgroundValue">#FFFFFF</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <label for="qrSize">QR Code Size</label>
+
+                    <div class="range-row">
+                        <input
+                            type="range"
+                            id="qrSize"
+                            min="180"
+                            max="500"
+                            value="300"
+                        >
+
+                        <span id="sizeValue">300px</span>
+                    </div>
+
+                </div>
+
+
+                <button class="generate-btn" id="generateBtn">
+                    Generate QR Code
+                    <span>→</span>
+                </button>
+
+            </div>
+
+
+            <!-- RIGHT -->
+            <div class="panel preview-panel">
+
+                <div class="panel-heading preview-heading">
+
+                    <div>
+                        <span class="mini-label">LIVE PREVIEW</span>
+                        <h2>Your QR Code</h2>
+                    </div>
+
+                    <span class="status-dot">
+                        <i></i> Ready
+                    </span>
+
+                </div>
+
+
+                <div class="qr-stage">
+
+                    <div class="qr-wrapper" id="qrWrapper">
+
+                        <div class="empty-state" id="emptyState">
+
+                            <div class="empty-icon">⌁</div>
+
+                            <h3>Your QR code will appear here</h3>
+
+                            <p>
+                                Enter your information and click
+                                <strong>Generate QR Code</strong>.
+                            </p>
+
+                        </div>
+
+                        <div id="qrcode"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="download-actions">
+
+                    <button class="download-btn primary" id="downloadPng" disabled>
+                        <span>↓</span>
+                        Download PNG
+                    </button>
+
+                    <button class="download-btn" id="copyBtn" disabled>
+                        <span>⧉</span>
+                        Copy
+                    </button>
+
+                </div>
+
+                <p class="privacy-note">
+                    🔒 Your information is processed directly in your browser.
+                    Nothing is uploaded to our server.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+    <section class="features-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">WHY USE IT?</span>
+
+                <h2>
+                    Simple. Fast. <span>Private.</span>
+                </h2>
+
+                <p>
+                    Everything you need to create a useful QR code without
+                    unnecessary complexity.
+                </p>
+            </div>
+
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+                    <span>⚡</span>
+                    <h3>Instant Generation</h3>
+                    <p>
+                        Generate QR codes directly in your browser without
+                        waiting for a server.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <span>🔒</span>
+                    <h3>Private by Design</h3>
+                    <p>
+                        Your entered information stays in your browser and
+                        isn't sent to our servers.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <span>🎨</span>
+                    <h3>Customizable</h3>
+                    <p>
+                        Choose your QR color, background and preferred size.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <span>📱</span>
+                    <h3>Works Everywhere</h3>
+                    <p>
+                        Create QR codes for websites, phones, email, Wi-Fi
+                        and plain text.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SEO CONTENT -->
+    <section class="content-section">
+
+        <div class="container content-container">
+
+            <span class="eyebrow">ABOUT THIS TOOL</span>
+
+            <h2>Free Online QR Code Generator</h2>
+
+            <p>
+                A QR code is a convenient way to share information using a
+                smartphone camera. With the TAHSION QR Code Generator,
+                you can quickly create a QR code for a website, text,
+                phone number, email address or Wi-Fi network.
+            </p>
+
+            <p>
+                The tool works directly in your browser, making it fast and
+                convenient for everyday use. You don't need to create an
+                account or provide personal information to generate a QR code.
+            </p>
+
+
+            <h3>What can you create?</h3>
+
+            <ul>
+                <li>Website and URL QR codes</li>
+                <li>Plain text QR codes</li>
+                <li>Phone number QR codes</li>
+                <li>Email QR codes</li>
+                <li>Wi-Fi connection QR codes</li>
+                <li>Custom colored QR codes</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="faq-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">FAQ</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+
+
+            <div class="faq-list">
+
+                <details>
+                    <summary>
+                        Is this QR Code Generator free?
+                        <span>+</span>
+                    </summary>
+
+                    <p>
+                        Yes. The TAHSION QR Code Generator is free to use
+                        and does not require an account.
+                    </p>
+                </details>
+
+
+                <details>
+                    <summary>
+                        Is my information stored?
+                        <span>+</span>
+                    </summary>
+
+                    <p>
+                        No. The generator creates the QR code directly in
+                        your browser. Your entered information is not
+                        uploaded to a TAHSION server.
+                    </p>
+                </details>
+
+
+                <details>
+                    <summary>
+                        Can I create a QR code for Wi-Fi?
+                        <span>+</span>
+                    </summary>
+
+                    <p>
+                        Yes. Enter your Wi-Fi network name, password and
+                        security type to create a Wi-Fi QR code.
+                    </p>
+                </details>
+
+
+                <details>
+                    <summary>
+                        Can I download my QR code?
+                        <span>+</span>
+                    </summary>
+
+                    <p>
+                        Yes. You can download the generated QR code as
+                        a PNG image.
+                    </p>
+                </details>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container footer-inner">
+
+        <div>
+            <strong>TAHSION</strong>
+            <p>Free tools. Useful results.</p>
+        </div>
+
+        <div>
+            <a href="../../index.html">Home</a>
+            <a href="../../tools.html">Free Tools</a>
+            <a href="../../contact.html">Contact</a>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © <span id="year"></span> TAHSION. All rights reserved.
+    </div>
+
+</footer>
+
+
+<div class="toast" id="toast"></div>
+
+
+<script src="./tools/js/qr-code-gen.js"></script>
+
+</body>
+</html>

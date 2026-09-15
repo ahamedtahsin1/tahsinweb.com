@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Age Calculator - Calculate Your Exact Age | TAHSION</title>
+
+    <meta name="description"
+          content="Calculate your exact age in years, months and days with the free TAHSION Age Calculator. See total days lived and your next birthday countdown.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+          href="https://ahamedtahsin1.github.io/tahsinweb.com/tools/age-calculator/">
+
+    <link rel="icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="tools/css/age-calc.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "TAHSION Age Calculator",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "isAccessibleForFree": true,
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a href="../../index.html" class="logo">
+            TAHSION
+        </a>
+
+        <nav class="main-nav">
+            <a href="../../index.html">Home</a>
+            <a href="../../tools.html" class="active">Free Tools</a>
+            <a href="../../contact.html">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="breadcrumb">
+                <a href="../../index.html">Home</a>
+                <span>/</span>
+                <a href="../../tools.html">Free Tools</a>
+                <span>/</span>
+                <span>Age Calculator</span>
+            </div>
+
+            <span class="eyebrow">FREE ONLINE TOOL</span>
+
+            <h1>
+                How old are you<br>
+                <span>really?</span>
+            </h1>
+
+            <p>
+                Enter your date of birth and discover your exact age,
+                days lived, and when your next birthday arrives.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CALCULATOR -->
+    <section class="calculator-section">
+
+        <div class="container">
+
+            <div class="calculator-card">
+
+                <div class="card-heading">
+
+                    <span class="card-label">
+                        DATE OF BIRTH
+                    </span>
+
+                    <h2>
+                        When were you born?
+                    </h2>
+
+                </div>
+
+
+                <form id="ageForm">
+
+                    <div class="date-field">
+
+                        <label for="birthDate">
+                            Your date of birth
+                        </label>
+
+                        <input
+                            type="date"
+                            id="birthDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="date-field">
+
+                        <label for="todayDate">
+                            Calculate age as of
+                        </label>
+
+                        <input
+                            type="date"
+                            id="todayDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="calculate-btn"
+                    >
+                        Calculate My Age
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- RESULT -->
+            <div
+                id="resultArea"
+                class="result-area"
+                aria-live="polite"
+            >
+
+                <div class="celebration">
+
+                    <div class="confetti confetti-1"></div>
+                    <div class="confetti confetti-2"></div>
+                    <div class="confetti confetti-3"></div>
+                    <div class="confetti confetti-4"></div>
+                    <div class="confetti confetti-5"></div>
+                    <div class="confetti confetti-6"></div>
+
+                    <div class="celebration-icon">
+                        🎉
+                    </div>
+
+                    <span class="result-eyebrow">
+                        YOUR AGE
+                    </span>
+
+                    <h2>
+                        You are
+                        <strong id="ageYears">0</strong>
+                        years old!
+                    </h2>
+
+                    <p id="exactAge">
+                        0 years, 0 months and 0 days
+                    </p>
+
+                    <div
+                        class="birthday-message"
+                        id="birthdayMessage"
+                    >
+                        🎂 Your next birthday is coming!
+                    </div>
+
+                </div>
+
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <span class="stat-icon">📅</span>
+
+                        <span class="stat-label">
+                            Months
+                        </span>
+
+                        <strong id="ageMonths">
+                            0
+                        </strong>
+
+                        <small>
+                            months old
+                        </small>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-icon">☀</span>
+
+                        <span class="stat-label">
+                            Days
+                        </span>
+
+                        <strong id="ageDays">
+                            0
+                        </strong>
+
+                        <small>
+                            days lived
+                        </small>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-icon">🎂</span>
+
+                        <span class="stat-label">
+                            Next Birthday
+                        </span>
+
+                        <strong id="birthdayDays">
+                            0
+                        </strong>
+
+                        <small>
+                            days to go
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="reset-btn"
+                    id="resetBtn"
+                >
+                    ↻ Calculate Again
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SEO CONTENT -->
+    <section class="content-section">
+
+        <div class="container content-container">
+
+            <div class="content-block">
+
+                <span class="section-label">
+                    HOW IT WORKS
+                </span>
+
+                <h2>
+                    Calculate your exact age
+                </h2>
+
+                <p>
+                    Our age calculator calculates the difference between
+                    your date of birth and the selected calculation date.
+                    The result is shown in years, months and days.
+                </p>
+
+                <p>
+                    You can also see your approximate total number of
+                    days lived and how many days remain until your next
+                    birthday.
+                </p>
+
+            </div>
+
+
+            <div class="faq-block">
+
+                <span class="section-label">
+                    FAQ
+                </span>
+
+                <h2>
+                    Age Calculator Questions
+                </h2>
+
+
+                <details>
+
+                    <summary>
+                        Can I calculate my age for a past date?
+                    </summary>
+
+                    <p>
+                        Yes. Change the "Calculate age as of" date to
+                        any date after your birth date.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Does the calculator require an account?
+                    </summary>
+
+                    <p>
+                        No. TAHSION Free Tools are designed to work
+                        without signup or an account.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        What does the calculator show?
+                    </summary>
+
+                    <p>
+                        It shows your age in years, months and days,
+                        total days lived, and the countdown to your
+                        next birthday.
+                    </p>
+
+                </details>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container footer-inner">
+
+        <div>
+
+            <a
+                href="../../index.html"
+                class="footer-logo"
+            >
+                TAHSION
+            </a>
+
+            <p>
+                Helping businesses build their digital presence.
+            </p>
+
+        </div>
+
+        <a
+            href="../../tools.html"
+            class="more-tools"
+        >
+            ← Back to Free Tools
+        </a>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <p>
+            © <span id="currentYear"></span>
+            TAHSION. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="tools/js/age-calc.js"></script>
+
+</body>
+</html>
