@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Percentage Calculator - Free Online Calculator | TAHSION</title>
+
+    <meta name="description"
+        content="Free percentage calculator to calculate percentages, find what percentage one number is of another, and calculate percentage increase or decrease.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+        href="https://ahamedtahsin1.github.io/tahsinweb.com/tools/percentage-calculator/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title"
+        content="Percentage Calculator - Free Online Calculator | TAHSION">
+    <meta property="og:description"
+        content="Calculate percentages, percentage increase, and percentage decrease with TAHSION's free online percentage calculator.">
+    <meta property="og:url"
+        content="https://ahamedtahsin1.github.io/tahsinweb.com/tools/percentage-calculator/">
+    <meta property="og:site_name" content="TAHSION">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+    <!-- Standalone Calculator CSS -->
+    <link rel="stylesheet" href="./tools/css/per-calc.css">
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ahamedtahsin1.github.io/tahsinweb.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Free Tools",
+                "item": "https://ahamedtahsin1.github.io/tahsinweb.com/tools.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Percentage Calculator",
+                "item": "https://ahamedtahsin1.github.io/tahsinweb.com/tools/percentage-calculator/"
+            }
+        ]
+    }
+    </script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "TAHSION Percentage Calculator",
+        "url": "https://ahamedtahsin1.github.io/tahsinweb.com/tools/percentage-calculator/",
+        "description": "Free online percentage calculator for calculating percentages, percentage increase, and percentage decrease.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": true,
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "TAHSION"
+        }
+    }
+    </script>
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <a href="../../index.html" class="logo">
+                TAHSION
+            </a>
+
+            <nav class="main-nav">
+                <a href="../../index.html">Home</a>
+                <a href="../../tools.html">Free Tools</a>
+                <a href="../../contact.html">Contact</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- BREADCRUMB -->
+        <div class="container">
+
+            <div class="breadcrumb">
+
+                <a href="../../index.html">Home</a>
+
+                <span>/</span>
+
+                <a href="../../tools.html">Free Tools</a>
+
+                <span>/</span>
+
+                <span>Percentage Calculator</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="container">
+
+                <span class="eyebrow">
+                    FREE ONLINE TOOL
+                </span>
+
+                <h1>
+                    Percentage Calculator
+                </h1>
+
+                <p>
+                    Calculate percentages, find what percentage one number is
+                    of another, and calculate percentage increase or decrease
+                    quickly and easily.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CALCULATORS -->
+        <section class="calculator-section">
+
+            <div class="container">
+
+                <div class="calculator-grid">
+
+
+                    <!-- =====================================
+                         CALCULATOR 1
+                    ====================================== -->
+
+                    <div class="calculator-card">
+
+                        <div class="card-header">
+
+                            <span class="card-number">01</span>
+
+                            <h2>
+                                What is X% of Y?
+                            </h2>
+
+                            <p>
+                                Find a percentage of a number.
+                            </p>
+
+                        </div>
+
+
+                        <form id="percentageOfForm">
+
+                            <div class="fields-row">
+
+                                <div class="field">
+
+                                    <label for="percentage">
+                                        Percentage
+                                    </label>
+
+                                    <div class="input-wrapper">
+
+                                        <input
+                                            type="number"
+                                            id="percentage"
+                                            placeholder="20"
+                                            step="any"
+                                            autocomplete="off"
+                                            required
+                                        >
+
+                                        <span>%</span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="field">
+
+                                    <label for="number">
+                                        Number
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="number"
+                                        placeholder="500"
+                                        step="any"
+                                        autocomplete="off"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="example-text">
+                                Example: 20% of 500
+                            </div>
+
+
+                            <button type="submit" class="calculate-btn">
+                                Calculate
+                            </button>
+
+                        </form>
+
+
+                        <div
+                            id="percentageOfResult"
+                            class="result"
+                            aria-live="polite">
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =====================================
+                         CALCULATOR 2
+                    ====================================== -->
+
+                    <div class="calculator-card">
+
+                        <div class="card-header">
+
+                            <span class="card-number">02</span>
+
+                            <h2>
+                                X is what percentage of Y?
+                            </h2>
+
+                            <p>
+                                Find what percentage one number is of another.
+                            </p>
+
+                        </div>
+
+
+                        <form id="whatPercentForm">
+
+                            <div class="fields-row">
+
+                                <div class="field">
+
+                                    <label for="part">
+                                        First number
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="part"
+                                        placeholder="100"
+                                        step="any"
+                                        autocomplete="off"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="field">
+
+                                    <label for="whole">
+                                        Second number
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="whole"
+                                        placeholder="500"
+                                        step="any"
+                                        autocomplete="off"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="example-text">
+                                Example: 100 is what percentage of 500?
+                            </div>
+
+
+                            <button type="submit" class="calculate-btn">
+                                Calculate
+                            </button>
+
+                        </form>
+
+
+                        <div
+                            id="whatPercentResult"
+                            class="result"
+                            aria-live="polite">
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =====================================
+                         CALCULATOR 3
+                    ====================================== -->
+
+                    <div class="calculator-card full-card">
+
+                        <div class="card-header">
+
+                            <span class="card-number">03</span>
+
+                            <h2>
+                                Percentage Increase or Decrease
+                            </h2>
+
+                            <p>
+                                Compare an original value with a new value.
+                            </p>
+
+                        </div>
+
+
+                        <form id="changeForm">
+
+                            <div class="fields-row">
+
+                                <div class="field">
+
+                                    <label for="original">
+                                        Original value
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="original"
+                                        placeholder="500"
+                                        step="any"
+                                        autocomplete="off"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="field">
+
+                                    <label for="newValue">
+                                        New value
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="newValue"
+                                        placeholder="650"
+                                        step="any"
+                                        autocomplete="off"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="example-text">
+                                Example: From 500 to 650
+                            </div>
+
+
+                            <button type="submit" class="calculate-btn">
+                                Calculate
+                            </button>
+
+                        </form>
+
+
+                        <div
+                            id="changeResult"
+                            class="result"
+                            aria-live="polite">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SEO CONTENT -->
+        <section class="content-section">
+
+            <div class="container content-container">
+
+                <h2>
+                    What Is a Percentage?
+                </h2>
+
+                <p>
+                    A percentage is a number expressed as a fraction of 100.
+                    The percentage symbol (%) means "out of 100." Percentages
+                    are commonly used for discounts, price changes, test
+                    scores, business growth, statistics, taxes, and everyday
+                    calculations.
+                </p>
+
+
+                <h2>
+                    How to Calculate a Percentage
+                </h2>
+
+                <p>
+                    To calculate a percentage of a number, divide the
+                    percentage by 100 and multiply it by the number.
+                </p>
+
+                <div class="formula">
+                    Percentage × Number ÷ 100
+                </div>
+
+                <p>
+                    For example, to calculate 20% of 500:
+                </p>
+
+                <div class="formula">
+                    20 × 500 ÷ 100 = 100
+                </div>
+
+
+                <h2>
+                    How to Find What Percentage One Number Is of Another
+                </h2>
+
+                <p>
+                    Divide the first number by the second number and multiply
+                    the result by 100.
+                </p>
+
+                <div class="formula">
+                    (First Number ÷ Second Number) × 100
+                </div>
+
+                <p>
+                    For example:
+                </p>
+
+                <div class="formula">
+                    (100 ÷ 500) × 100 = 20%
+                </div>
+
+
+                <h2>
+                    How to Calculate Percentage Increase or Decrease
+                </h2>
+
+                <p>
+                    Percentage change compares an original value with a new
+                    value. Subtract the original value from the new value,
+                    divide the difference by the original value, and multiply
+                    by 100.
+                </p>
+
+                <div class="formula">
+                    ((New Value − Original Value) ÷ Original Value) × 100
+                </div>
+
+                <p>
+                    A positive result means the value increased. A negative
+                    result means the value decreased.
+                </p>
+
+
+                <h2>
+                    Common Uses of a Percentage Calculator
+                </h2>
+
+                <ul>
+                    <li>Calculating discounts and sale prices</li>
+                    <li>Comparing business growth</li>
+                    <li>Calculating test and exam scores</li>
+                    <li>Understanding price increases and decreases</li>
+                    <li>Comparing two numbers</li>
+                    <li>Working with statistics and percentages</li>
+                </ul>
+
+
+                <h2>
+                    Frequently Asked Questions
+                </h2>
+
+              
+                <h3>
+                    Is this percentage calculator free?
+                </h3>
+
+                <p>
+                    Yes. TAHSION's percentage calculator is completely free
+                    to use and performs calculations directly in your browser.
+                </p>
+
+
+                <h3>
+                    What is 20% of 500?
+                </h3>
+
+                <p>
+                    20% of 500 is 100.
+                </p>
+
+
+                <h3>
+                    How do I calculate percentage increase?
+                </h3>
+
+                <p>
+                    Subtract the original value from the new value, divide the
+                    difference by the original value, and multiply by 100.
+                </p>
+
+
+                <h3>
+                    How do I calculate percentage decrease?
+                </h3>
+
+                <p>
+                    Use the percentage change formula. When the new value is
+                    lower than the original value, the result is a percentage
+                    decrease.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <p>
+                © <span id="currentYear"></span> TAHSION. All Rights Reserved.
+            </p>
+
+            <a href="../../tools.html">
+                More Free Tools
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="./tools/js/percalc.js"></script>
+
+</body>
+
+</html>
